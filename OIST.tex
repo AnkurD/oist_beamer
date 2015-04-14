@@ -1,0 +1,111 @@
+\pdfoutput=1 % only if pdf/png/jpg images are used
+\documentclass{beamer2}
+\usetheme{OIST}
+\let\Tiny=\tiny
+\let\ifpdf\relax
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{subeqnarray}
+\usepackage{graphicx}
+\graphicspath{{fig/}}
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{amsfonts} % for symbols
+\usepackage{epstopdf} % for gnuplot conversion
+\usepackage{listings} % for listing code
+\usepackage[section]{placeins}% to prevent floating between sections
+\usepackage{microtype} % for overfull and underfull boxes
+\usepackage{appendix} % for appendices
+\usepackage{subfig}
+
+
+%%% Custom Commands and Parameters
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\renewcommand{\appendixpagename}{Appendix}
+\lstset{breaklines=true}
+\captionsetup[subfigure]{labelformat=empty}
+
+\title{Title}
+\author{A.~Dhar\inst{1}}
+\institute[OIST] % (optional)
+{
+  \inst{1}%
+  Template Unit
+}
+\date{\today}
+
+ \AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+ \frame{\titlepage}
+
+\begin{frame}{Table of Contents}
+ \tableofcontents
+\note{}
+ \end{frame}
+
+\section{Section 1}
+
+\begin{frame}{Slide 1}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+\begin{figure}
+\centering
+
+\caption{Figure}
+\end{figure}
+
+\end{frame}
+
+\section{Section 2}
+
+\begin{frame}{Slide 2}
+\begin{center}
+\small{Title}
+\end{center}
+\begin{columns}[c]
+\column{.5\textwidth}
+\begin{figure}
+\centering
+\begin{picture}(200,100)
+\put(0,0){}
+\put(35,25){\makebox(0,0){\strut{}Label}}
+\end{picture}
+\end{figure}
+
+\column{.5\textwidth}
+\begin{figure}
+\centering
+
+\caption{Figure}
+\end{figure}
+\end{columns}
+\begin{center}
+Comment
+\end{center}
+
+\end{frame}
+
+
+%
+% \begin{frame}{Bibliography}
+% \bibliographystyle{plain}
+% \bibliography{../bib}
+% \end{frame}
+
+\end{document}

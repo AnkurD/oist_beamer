@@ -1,0 +1,43 @@
+\usepackage{OISTcolours}
+
+\def\beamer@theme@base@red{
+  \definecolor{OISTCore}{named}{OISTCoreRed}
+  \definecolor{OISTLight}{named}{OISTLightRed}
+  \definecolor{OISTDark}{named}{OISTDarkRed}
+  \definecolor{OISTBG}{named}{OISTBG}
+}
+
+
+\beamer@theme@base@red
+\DeclareOptionBeamer{base}{\csname beamer@theme@base@#1\endcsname}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+
+\setbeamercolor*{normal text}{fg=OISTDark,bg=OISTBG!20!white}
+\setbeamercolor*{structure}{fg=OISTDark}
+
+\setbeamercolor*{palette primary}{fg=white,bg=OISTLight}
+\setbeamercolor*{palette secondry}{fg=white,bg=OISTDark}
+\setbeamercolor*{palette tertiary}{fg=white,bg=OISTLight!40!black}
+\setbeamercolor*{palette quaternary}{fg=white,bg=OISTLight!40!white}
+
+\setbeamercolor*{title}{fg=white,bg=OISTLight!50!OISTCore}
+\setbeamercolor*{author}{fg=white,bg=OISTLight!70!black}
+\setbeamercolor*{institute}{parent=author}
+\setbeamercolor*{date}{fg=white,bg=OISTLight}
+\setbeamercolor*{abstract}{parent=author}
+
+\setbeamercolor*{lower separation line head}{fg=white,bg=OISTDark}
+
+\setbeamercolor*{special page canvas}{bg=OISTLight}
+\setbeamercolor*{special page separator upper}{bg=OISTLight!40!white}
+\setbeamercolor*{special page separator lower}{bg=OISTLight!40!black}
+\setbeamercolor*{special page title}{fg=white,bg=OISTLight!80!white}
+
+\setbeamercolor*{block body}{bg=OISTCore!20!normal text.bg,fg=OISTDark}
+\setbeamercolor*{block title}{bg=OISTDark,fg=white}
+
+\setbeamercolor*{alerted text}{fg=OISTCore}
+
+\mode<all>

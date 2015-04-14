@@ -1,0 +1,13 @@
+\def\the@base{blue}
+\DeclareOptionBeamer{base}{\def\the@base{#1}}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+
+\useinnertheme{OIST}
+\useoutertheme{OIST}
+\usecolortheme[base=\the@base]{OIST}
+%\usefonttheme{cambridge}
+
+\mode
+<all>
